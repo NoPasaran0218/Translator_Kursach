@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<section class="syntactic-parser">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Syntactic Grammar:</h3>
+                <textarea name="grammarText" id="grammarText" rows="20" readonly>&lt;прогр&gt;::=prog IDN var &lt;спис_огол1&gt; { &lt;спис_опер1&gt; }
+&lt;спис_огол1&gt;::=&lt;спис_огол&gt;
+&lt;спис_огол&gt;::=&lt;спис_ід1&gt; ¶|&lt;спис_ід1&gt; ¶ &lt;спис_огол&gt;
+&lt;спис_ід1&gt;::=&lt;спис_ід&gt;
+&lt;спис_ід&gt;::=&lt;тип&gt; IDN|&lt;спис_ід&gt; , IDN
+&lt;спис_опер1&gt;::=&lt;спис_опер&gt;
+&lt;спис_опер&gt;::=&lt;опер1&gt; ¶|&lt;опер1&gt; ¶ &lt;спис_опер&gt;
+&lt;тип&gt;::=int|double
+&lt;опер1&gt;::=&lt;опер&gt;
+&lt;опер&gt;::=&lt;вивід&gt;|&lt;ввід&gt;|&lt;присв&gt;|&lt;цикл&gt;|&lt;ум_опер&gt;
+&lt;присв&gt;::=IDN = &lt;вираз1&gt;
+&lt;вивід&gt;::=cout &lt;опер_виводу1&gt;
+&lt;опер_виводу1&gt;::=&lt;опер_виводу&gt;
+&lt;опер_виводу&gt;::=&lt;&lt; IDN|&lt;&lt; CST|&lt;опер_виводу&gt; &lt;&lt; IDN|&lt;опер_виводу&gt; &lt;&lt; CST
+&lt;ввід&gt;::=cin &lt;опер_вводу1&gt;
+&lt;опер_вводу1&gt;::=&lt;опер_вводу&gt;
+&lt;опер_вводу&gt;::=&gt;&gt; IDN|&lt;опер_вводу&gt; &gt;&gt; IDN
+&lt;цикл&gt;::=do while ( &lt;лог_вираз1&gt; ) &lt;спис_опер1&gt; enddo
+&lt;ум_опер&gt;::=if ( &lt;лог_вираз1&gt; ) then &lt;опер_блок&gt;|if ( &lt;лог_вираз1&gt; ) then &lt;опер&gt;
+&lt;опер_блок&gt;::={ &lt;спис_опер1&gt; }
+&lt;лог_вираз1&gt;::=&lt;лог_вираз&gt;
+&lt;лог_вираз&gt;::=&lt;лог_терм1&gt;|&lt;лог_вираз&gt; or &lt;лог_терм1&gt;
+&lt;лог_терм1&gt;::=&lt;лог_терм&gt;
+&lt;лог_терм&gt;::=&lt;лог_мн1&gt;|&lt;лог_терм&gt; and &lt;лог_мн1&gt;
+&lt;лог_мн1&gt;::=&lt;лог_мн&gt;
+&lt;лог_мн&gt;::=&lt;відн&gt;|[ &lt;лог_вираз1&gt; ]|not &lt;лог_мн&gt;
+&lt;відн&gt;::=&lt;вираз1&gt; &lt; &lt;вираз1&gt;|&lt;вираз1&gt; &gt; &lt;вираз1&gt;|&lt;вираз1&gt; &lt;= &lt;вираз1&gt;|&lt;вираз1&gt; &gt;= &lt;вираз1&gt;|&lt;вираз1&gt; == &lt;вираз1&gt;|&lt;вираз1&gt; != &lt;вираз1&gt;
+&lt;вираз1&gt;::=&lt;вираз&gt;
+&lt;вираз2&gt;::=&lt;вираз1&gt;
+&lt;вираз&gt;::=&lt;терм1&gt;|&lt;вираз&gt; + &lt;терм1&gt;|&lt;вираз&gt; - &lt;терм1&gt;
+&lt;терм1&gt;::=&lt;терм&gt;
+&lt;терм&gt;::=&lt;мн1&gt;|&lt;терм&gt; * &lt;мн1&gt;|&lt;терм&gt; / &lt;мн1&gt;
+&lt;мн1&gt;::=&lt;мн&gt;
+&lt;мн&gt;::=IDN|CST|( &lt;вираз2&gt; )</textarea>
+            </div>
+            <h3 id="relation-capture">Reletionship table:</h3>
+            <div class="table-box">
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ascending-result">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ascending-parser-table">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lexem-table-stn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="lexem-table-token">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="lexem-table-identity">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="lexem-table-const">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main-stn">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Write your program below</h3>
+                <textarea name="codeText" rows="12" id="codeText"></textarea>
+            </div>
+            <div class="col-lg-6">
+                <h3>Programs console:</h3>
+                <textarea name="console" rows="12" id="console"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="start-btn">
+                    <p>Run</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

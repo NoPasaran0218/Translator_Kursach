@@ -1,0 +1,165 @@
+﻿body{
+    background-color: gainsboro;
+}
+header{
+    min-height: 80px;
+    background: linear-gradient(to right bottom, dimgray, darkslateblue);
+    border-radius: 0 0 10px 10px;
+    padding-top: 20px;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+header ul li{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 100px;
+    font-size: 30px;
+    text-shadow: 4px 4px 3px black;
+}
+
+header ul li a{
+    color: dodgerblue;
+}
+
+header ul li a:hover{
+    text-decoration: none;
+    color: lightskyblue;
+    transition: .3s ease-in-out;
+}
+
+#logo-img{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+header h1{
+    margin-bottom: 0;
+    margin-top: 5px;
+    color: lightskyblue;
+    text-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+
+section{
+    padding-top: 15px;
+}
+.syntactic-parser h3{
+    text-align: center;
+}
+.syntactic-parser textarea{
+    width:100%;
+    border-radius: 5px;
+    background: rgba(192,192,192,0.5);
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.syntactic-parser table tr td{
+    padding: 5px;
+    text-align:center;
+}
+
+.syntactic-parser #relation-capture{
+    display:none;
+}
+
+.table-box{
+    display:none;
+    width: 97%;
+    margin-left: 1.5%;
+    height: 350px;
+    overflow: scroll;
+}
+
+#codeText{
+    width:100%;
+    border-radius: 5px;
+    background: rgba(192,192,192,0.5);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 18px;
+}
+
+#console{
+    width:100%;
+    border-radius: 5px;
+    background: rgba(192,192,192,0.5);
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    font-size: 18px;
+}
+
+.main-stn h3{
+    text-align: center;
+}
+
+.start-btn{
+    background: linear-gradient(to bottom, Silver, gray, Silver);
+    text-align: center;
+    border-radius: 5px;
+    color:DimGray;
+    height: 30px;
+    line-height: 30px;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+    margin-top:10px;
+}
+
+.start-btn:hover{
+    background: linear-gradient(to bottom, darkgray, silver, darkgray);
+    color: white;
+    border: 1px solid white;
+    transition: .3s ease-in-out;
+}
+
+.start-btn p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#loader{
+    position:absolute;
+    background-color:darkolivegreen;
+    background-image: url('IMG/gears.gif');
+    display:none;
+    width:100%;
+    height:100%;
+}
+.ascending-parser-table table{
+    align-content:center;
+}
+.ascending-parser-table table td{
+    text-align:center;
+    border:1px solid black;
+    overflow:hidden;
+    padding:4px 4px 4px 4px;
+}
+
+.ascending-parser-table table td:nth-child(3n+1){
+    text-align:right;
+    width:45%;
+}
+
+.ascending-parser-table table td:nth-child(3n+2){
+    text-align:center;
+    width:8%;
+}
+
+.ascending-parser-table table td:nth-child(3n+3){
+    text-align:left;
+    width:45%;
+}
+
+.lexem-table-stn table td{
+    text-align:center;
+    border:1px solid gray;
+    overflow:hidden;
+    padding: 5px 3px 4px 3px;
+}
+
+table tr td{
+    background-color: rgba(242,242,242,0.5);
+}
