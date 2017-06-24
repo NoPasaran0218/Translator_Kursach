@@ -16,7 +16,7 @@
             },
             success:RelationTableBilder
         });
-        alert(1);
+        //alert(1);
         //LexemAnalyzer();
     });
 });
@@ -102,6 +102,8 @@ function LexemAnalyzer() {
 }
 
 function onAnalyzeSuccess(result) {
+    if (result.lexemAnalyzeResult != "Successful Done")
+        return;
     var loader = document.querySelector('#loader');
     loader.style.display = 'none';
     var console = document.querySelector('#console');

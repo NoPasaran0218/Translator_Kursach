@@ -87,6 +87,8 @@ namespace Translator.Models
             context.Lexem.Add(new Lexem() { Token = "not", Separator = false });
             context.Lexem.Add(new Lexem() { Token = "idn", Separator = false });
             context.Lexem.Add(new Lexem() { Token = "const", Separator = false });
+            context.Lexem.Add(new Lexem() { Token = "[", Separator = true });
+            context.Lexem.Add(new Lexem() { Token = "]", Separator = true });
             context.SaveChanges();
 
 
